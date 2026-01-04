@@ -49,15 +49,12 @@ To build this replacement clock module, you will need the following components:
 - **2× 470 µF / 16 V electrolytic capacitors**
 - **2× 100 nF ceramic capacitors (2.54 mm lead spacing)**
 - **4× 1N4004 / 1N4005 / 1N4006 / 1N4007 diodes**
+- **1x 7805 Voltage Regulator**
 
-### Connectors
-
-- The **two connectors** used on the PCB were salvaged from the original clock module.
+- The two connectors (power and buttons) used on the PCB were salvaged from the original clock module.
 - If you prefer to use new connectors, these can be replaced with:
   - **Right-angle JST-XH 2-pin connector**
   - **Right-angle JST-XH 3-pin connector**
-
-Both options are electrically compatible.
 
 ---
 
@@ -72,14 +69,6 @@ In the source code, locate the following section:
 ```
 
 Change the values of `WIFI_SSID` and `WIFI_PASS` to match your own WiFi network credentials.
-
-Example:
-
-```cpp
-#define WIFI_SSID "YourWiFiName"
-#define WIFI_PASS "YourWiFiPassword"
-```
-
 After flashing the firmware with the correct settings, the module will automatically connect to WiFi and synchronize the time via NTP.
 
 ---
